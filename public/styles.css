@@ -1,0 +1,128 @@
+/* Main styling for the Smart Carbon Monitoring Platform */
+
+:root {
+  --primary-color: #1e88e5;
+  --secondary-color: #43a047;
+  --alert-color: #e53935;
+  --warning-color: #ffb300;
+  --bg-light: #f8f9fa;
+  --bg-dark: #343a40;
+  --text-dark: #212529;
+  --text-light: #f8f9fa;
+  --border-radius: 0.375rem;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: #f0f2f5;
+}
+
+/* Header styling */
+.header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1.5rem 0;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--bg-light);
+  font-weight: 600;
+}
+
+/* Progress bars */
+.progress {
+  height: 0.75rem;
+  border-radius: 1rem;
+  background-color: #e9ecef;
+}
+
+.progress-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+/* Stats items */
+.stats-item {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.stats-item h3 {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.stats-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Table styling */
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  font-weight: 600;
+  border-top: none;
+}
+
+/* Chart containers */
+canvas {
+  max-width: 100%;
+}
+
+/* Buttons */
+.btn-group .btn {
+  font-size: 0.85rem;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #ddd;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .stats-item {
+    padding: 0.3rem;
+  }
+  
+  .stats-item p {
+    font-size: 1.5rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Animations */
+.alert {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
